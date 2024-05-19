@@ -1,0 +1,19 @@
+#(1)
+df <- data.frame(
+Name=c("Zhangsan","Lisi","Wangwu","Zhaoliu","Dingyi"),
+Sex=c("F","M","F","M","F"),
+Age=c(14,15,16,14,15),
+Height=c(156,165,157,162,159),
+Weight=c(42,49,41.5,52,45.5)
+);df
+df[[1]][2]="Zhaoliu"
+df[[1]][4]="Lisi"
+df
+df $Hometown=c("Guangdong","Guangdong","Guangdong","Beijing","Shanxi")
+df
+#(2)
+install.packages("nleqslv")
+library(nleqslv)
+f <- function(x) (exp(-x^2))*(x+sin(x))
+optimize(f,interval=c(-2,2))
+optimize(f,interval=c(-2,2),maximum=TRUE)

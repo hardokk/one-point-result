@@ -1,0 +1,8 @@
+install. packages("openxlsx")
+library(openxlsx)
+datal=read. table("clipboard", header=TRUE)
+data2=read. table("clipboard", header=TRUE)
+data12=merge(data1,data2)
+library(openxlsx)
+write. xlsx(data12, file = "实验1.3. xlsx")
+data12.1=(which(data12$"失业率"<3 & data12$"人均GDP">30000));data12.1 data12[c(2,5,8),]
